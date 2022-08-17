@@ -260,6 +260,10 @@ app.delete("/api/delete/:id", verifyToken, (req, res) => {
     });
 })
 
+app.get("/", (req, res) => {
+    res.send("Welcome to chian");
+})
+
 app.listen(port, function() {
     console.log("Server is running at port 3000");
 });
