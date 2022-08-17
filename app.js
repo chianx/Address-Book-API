@@ -46,7 +46,7 @@ app.post("/api/login", async (req, res) => {
                     console.log("password match");
                     jwt.sign({result}, secretKey, (err, token) => {
                         if(err) {
-                            consolr.log(err);
+                            console.log(err);
                         }else {
                             res.json({ 
                                 token : token,
