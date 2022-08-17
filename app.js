@@ -94,7 +94,6 @@ function verifyToken(req, res, next) {
                 }
             }
         })
-        next();
     }else {
         res.json({
             message : "Login to get a JSON Web Token"
