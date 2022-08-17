@@ -77,7 +77,7 @@ function verifyToken(req, res, next) {
         // verifying secretKey and validity of token here
         jwt.verify(req.token, secretKey , async (error, adminData) => {
             if(error) {
-                res.json({error: error});
+                res.json({error: error, key :secretKey});
             }else {
                 try {
                     // Fetching admin details and checking password
@@ -234,7 +234,6 @@ app.get("/api/fetchAll", async (req, res) => {
 app.patch("/api/update/:id", verifyToken, (req, res) => {
     const id = req.params.id;
     const update = req.body;
-    console.log(req.body);
     Address.updateOne({addressId : id}, update, (err, result) => {
         if(err) {
             console.log(err);
