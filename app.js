@@ -261,7 +261,7 @@ app.delete("/api/delete/:id", verifyToken, (req, res) => {
 })
 
 app.get("/", (req, res) => {
-    res.send("Welcome to chian");
+    res.send("Welcome to Address Book Api - made by chianx");
 })
 
 app.listen(port, function() {
