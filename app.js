@@ -247,7 +247,7 @@ app.patch("/api/update/:id", verifyToken, (req, res) => {
 // Reqires JWT
 app.delete("/api/delete/:id", verifyToken, (req, res) => {
     const id = req.params.id;
-    Address.deleteOne({addressId : id}, (error, result) => {
+    Address.deleteOne({addressId : id}, (err, result) => {
         if(err) {
             console.log(err);
             res.json({error : err});
