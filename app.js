@@ -19,7 +19,7 @@ if(port == null || port == "") {
     port = 3000;
 }
 
-const secretKey = process.env.SecretKey; //you can put your secret key here for JWT
+const secretKey = process.env.secretKey; //you can put your secret key here for JWT
 
 // Route for login (Requires Username and passsword of Admin)
 // Returns JSON Web Token (JWT) which is to be used for insertion, updation and deletion operations further
